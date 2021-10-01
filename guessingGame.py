@@ -1,6 +1,9 @@
-answer = 5
+import random
 
-print("Please guess a numebr between 1-10")
+highest = 10
+answer = random.randint(1, highest)
+
+print("Please guess a numebr between 1-{}".format(highest))
 guess = int(input())
 
 if guess == answer:
@@ -20,6 +23,7 @@ else:
     else:
         print("too bad, loser")
 
+print(answer) #TODO: remove this line
 
 # if guess != answer:
 #     if guess < answer:
