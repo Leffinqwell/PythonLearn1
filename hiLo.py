@@ -8,7 +8,7 @@ guesses = 1
 while True:
     print("guessing in {} to {}". format(low, high))
     guess = low + (high - low) // 2
-    high_low = input("my guess {}. Should i guess highher or lower?"
+    high_low = input("my guess is {}. Should i guess higher or lower?"
                      "H for higher, L for lower, C for correct"
                      .format(guess).casefold())
     if high_low == "h":
