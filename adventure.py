@@ -9,5 +9,8 @@ while choice_dir.casefold() not in directions:
         print("you have lost the game")
         break
 
-if choice_dir.casefold() in directions:
-    print("you went {}".format(choice_dir))
+else:
+    print("You went {}".format(choice_dir))
+
+# if choice_dir.casefold() in directions:
+#     print("you went {}".format(choice_dir))
