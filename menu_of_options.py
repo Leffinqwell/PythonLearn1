@@ -8,7 +8,6 @@ while choice != 0:
         print("You choose {}!".format(choice))
     else:
         for itter in options:
-
             i += 1
             print(f"{i}.\t" + itter)
         else:
