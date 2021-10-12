@@ -10,5 +10,13 @@ print(numbers)
 print(sorted(numbers))
 print(numbers)
 
-# numbers.sort()
-# print(numbers)
+numbers.sort()
+print(numbers)
+
+missing_letter = sorted("The Real stuff goes around",
+                        key=str.casefold)
+print(missing_letter)
+
+names = ["Graham", "John", "terry", "eric", "Terry", "micheal"]
+names.sort(key=str.casefold)
+print(names)
