@@ -10,7 +10,7 @@ choosable_computer_parts = ["computer",
 
 chosen_computer_parts = []
 
-while current_choice != 0:
+while current_choice != 665:
     i = 0
     if current_choice in range(0,len(choosable_computer_parts)):
         print("adding {}".format(current_choice))
