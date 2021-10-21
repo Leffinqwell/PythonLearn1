@@ -5,14 +5,26 @@ computer_parts = ["computer",
                   "mouse mat"
                   ]
 
-another_list = computer_parts
-a = b = c = computer_parts
-computer_parts += ["repro"]
-b.append("mic")
-
 print(computer_parts)
-print(a)
 
+#computer_parts[3] = "trackball"
+
+print(computer_parts[3:])
+
+computer_parts[3:] = ["trackball"]
+print(computer_parts)
+
+
+
+
+# another_list = computer_parts
+# a = b = c = computer_parts
+# computer_parts += ["repro"]
+# b.append("mic")
+#
+# print(computer_parts)
+# print(a)
+#
 
 
 # result = True
