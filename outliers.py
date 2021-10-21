@@ -23,7 +23,6 @@ del(data[:stop])
 print(data)
 
 start = 0
-
 for index in range(len(data) - 1, -1, -1):
     if data[index] <= max_valid:
         start = index + 1
