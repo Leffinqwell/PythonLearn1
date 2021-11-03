@@ -11,11 +11,12 @@ menu = [
 
 
 for meal in menu:
-    print(meal)
+#    print(meal)
     length = len(meal)-1
     for index, value in enumerate(reversed(meal)):
         if meal[length - index] == "spam":
-            print(length - index, value)
+#            print(length - index, value)
             del(meal[length - index])
-
-print(menu)
+    print(", ".join(meal))
+#    print(meal, end=" ")
+#print(menu)
