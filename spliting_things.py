@@ -33,8 +33,16 @@ for str in values_list:
 
 print(values_int_list)
 
-for index, str in range(0, len(values_list)):
-    print(index)
-#    values_list.insert(index, int(str))
+for index, str in enumerate(values_list):
+#    print(index)
+    values_list[index] = int(str)
 
 print(values_list)
+
+opt = (input("Please enter three numbers:"))
+numbers = opt.split(",")
+int_number = []
+for x in numbers:
+    int_number.append(int(x))
+
+print(int_number[0] + int_number[1] - int_number[2])
