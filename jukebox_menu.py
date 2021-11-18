@@ -15,6 +15,7 @@ while True:
         break
 
     print("Please choose a song:")
+
     for index, (track_number, song) in enumerate(songs_list):
         print("{}: {}".format(index + 1, song))
     song_choice = int(input())
