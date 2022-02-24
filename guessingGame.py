@@ -1,23 +1,32 @@
 import random
 
+def get_integer(prompt):
+    while True:
+        temp = input(prompt)
+        if temp.isnumeric():
+            return int(temp)
+        else:
+            print("wut?")
+
+
 highest = 10
 answer = random.randint(1, highest)
 
 print("Please guess a numebr between 1-{}".format(highest))
-guess = int(input())
+guess = get_integer(" : ")
 
 if guess == answer:
     print("well done")
 elif guess < answer:
     print("guess higher")
-    guess = int(input())
+    guess = get_integer(" : ")
     if guess == answer:
         print("well done, on second time")
     else:
         print("too bad, loser")
 else:
     print("guess lower")
-    guess = int(input())
+    guess = get_integer(" : ")
     if guess == answer:
         print("well done, on second time")
     else:

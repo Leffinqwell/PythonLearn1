@@ -10,7 +10,7 @@ print("Please guess a numebr between 1-{}".format(highest))
 while answer != guess:
 
     guess = int(input())
-    if guess == 0 or guess > 10:
+    if guess == 0 or guess > highest:
         print("You can't read, game over")
         break
     elif guess < answer:
