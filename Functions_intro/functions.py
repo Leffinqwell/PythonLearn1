@@ -1,15 +1,31 @@
-def multiply(x, y):
+def multiply(x: float, y: float) -> float:
+    """
+    multiplies x by y
+    :param x:
+    :param y:
+    :return:
+    """
     result = x * y
     return result
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
+    """
+    single word validation for palindromity
+    :param string:
+    :return:
+    """
     backwards = string[::-1]
     return backwards.casefold() == string.casefold()
     # return string[::-1] == string
 
 
-def palindrome_sentence(string):
+def palindrome_sentence(string: str) -> bool:
+    """
+    Whole sentence validation for palindromity
+    :param string:
+    :return:
+    """
     string1 = ""
     for char in string:
         if char.isalnum():
@@ -18,11 +34,36 @@ def palindrome_sentence(string):
 #    return string1.casefold()[::-1] == string1.casefold()
     return is_palindrome(string1)
 
-word = input("enter your word: ")
-if palindrome_sentence(word):
-     print("'{}' is a palindrome".format(word))
-else:
-     print("'{}' is not a palindrome".format(word))
+
+def fibonacci(n: int) -> int:
+    """
+    return the 'n'th number of fibonacci number, for positive 'n'
+    :param n:
+    :return:
+    """
+    if 0 <= n <= 1:
+        return n
+
+    n_minus1, n_minus2 = 1, 0
+
+    result = None
+    for f in range(n-1):
+        result = n_minus2 + n_minus1
+        n_minus2 = n_minus1
+        n_minus1 = result
+
+    return result
+
+
+for i in range(-10):
+    print(i, fibonacci(i))
+
+
+# word = input("enter your word: ")
+# if palindrome_sentence(word):
+#      print("'{}' is a palindrome".format(word))
+# else:
+#      print("'{}' is not a palindrome".format(word))
 
 
 # word = input("enter your word: ")
