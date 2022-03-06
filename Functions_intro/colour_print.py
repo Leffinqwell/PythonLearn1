@@ -16,17 +16,18 @@ UNDERLINE = '\u001b[4m'
 REVERSE = '\u001b[7m'
 
 
-def colour_print(text: str, efect: str) -> None:
+def colour_print(text: str, *efects: str) -> None:
     """
     print 'text' using the insci sequence to change colour.
     :param text: 
-    :param efect: 
+    :param efects:
     :return: 
     """
-    output_string = "{0}{1}{2}".format(efect, text, RESET)
+    effect_string = "".join(efects)
+    output_string = "{0}{1}{2}".format(effect_string, text, RESET)
     print(output_string)
 
 colorama.init()
-colour_print("this is red", RED)
+colour_print("this is red", RED, BOLD, UNDERLINE, REVERSE)
 print("this is print")
 colorama.deinit()
